@@ -1,115 +1,136 @@
-# Legacy PHP Routing Fix
+# Kosamphi ITA 2024
 
-![PHP Legacy](https://img.shields.io/badge/PHP-Legacy-777bb3)
+Production Legacy System for Integrity and Transparency Assessment (ITA)
 
-## Summary
-Fixed critical routing failures in a legacy PHP hospital system, resolving HTTP 404 errors across multiple modules and restoring system stability in a production environment without a full system rewrite.
+---
 
-> Note: This repository contains a simplified and sanitized representation of a real-world legacy system issue. The focus is on demonstrating the debugging and routing fixes applied.
+## Overview
+
+This repository represents a production-grade legacy PHP system used by the Kosamphi Nakhon District Health Office under the Ministry of Public Health (MOPH) network.
+
+The system is responsible for managing Integrity and Transparency Assessment (ITA) workflows, including data collection, evaluation, and reporting processes in a real-world government healthcare environment.
+
+This project reflects hands-on experience working with and maintaining a legacy codebase in production.
 
 ---
 
 ## Impact
-- Resolved HTTP 404 errors across multiple modules  
-- Restored critical system functionality  
-- Stabilized production workflows used by clinical staff  
-- Executed fixes in a live production environment under operational constraints  
+
+* Actively used in a government healthcare organization
+* Supports real ITA evaluation and reporting workflows
+* Handles structured administrative and compliance data
+* Improves transparency and operational efficiency
+* Integrated into MOPH production infrastructure
 
 ---
 
-## My Contribution
-- Diagnosed and fixed routing failures across the system  
-- Identified and resolved broken URL handling and path resolution issues  
-- Restored module-level functionality without a full rewrite  
-- Applied fixes across multiple parts of the codebase in a production environment  
+## System Context
+
+Traditional ITA processes relied on fragmented and manual workflows across multiple systems.
+This platform centralizes data management and standardizes evaluation processes within a single web-based system.
 
 ---
 
-## Problem
-The system suffered from:
-- Undocumented and inconsistent PHP codebase  
-- Broken internal routing logic  
-- Incorrect URL path handling  
-- Repeated HTTP 404 failures in production  
+## Engineering Responsibilities
 
-These issues disrupted internal workflows and reduced system reliability.
-
----
-
-## Solution
-- Reverse-engineered the legacy application structure  
-- Identified broken routing patterns and failure points  
-- Fixed path resolution and routing logic  
-- Applied incremental fixes to minimize production risk  
-- Stabilized the system without introducing breaking changes  
+* Maintained and modified a legacy PHP codebase in production
+* Implemented updates based on evolving ITA requirements
+* Ensured system stability during changes and deployments
+* Debugged and resolved issues in a live environment
+* Improved code readability and organization where applicable
 
 ---
 
-## Architecture
-Request flow:
+## Legacy System Experience
 
-[Client Browser]  
-↓  
-[Apache Web Server]  
-↓  
-[Legacy PHP Application]  
-↓  
-[MySQL Database]  
-
-Routing handled via Apache `mod_rewrite` with corrected path resolution.
-
----
-
-## Technical Highlights
-- Debugging undocumented legacy systems  
-- Fixing routing and URL path resolution issues  
-- Working with Apache `mod_rewrite`  
-- Resolving production-level failures  
-- Incremental refactoring under system constraints  
+* Worked with non-modular, tightly coupled PHP architecture
+* Navigated limited or undocumented codebase
+* Applied changes without disrupting existing workflows
+* Balanced short-term fixes with long-term maintainability
+* Adapted to constraints of existing infrastructure (MOPH network)
 
 ---
 
 ## Challenges
-- Lack of documentation  
-- Inconsistent routing behavior  
-- Risk of breaking existing functionality  
-- Limited visibility into system architecture  
+
+* Maintaining system stability in a production environment
+* Understanding and modifying legacy code without documentation
+* Handling inconsistent data structures
+* Ensuring compatibility with existing workflows and users
+* Working within infrastructure constraints
+
+---
+
+## Architecture Overview
+
+```
+[User / Staff]
+      ↓
+[PHP Application (Monolithic)]
+      ↓
+[MySQL Database]
+      ↓
+[MOPH Network Infrastructure]
+```
 
 ---
 
 ## Tech Stack
-- PHP (Legacy)  
-- Apache  
-- MySQL  
-- URL Routing (`mod_rewrite`)  
+
+| Layer      | Technology             |
+| ---------- | ---------------------- |
+| Backend    | PHP (Legacy)           |
+| Database   | MySQL                  |
+| Frontend   | HTML, CSS, JavaScript  |
+| Deployment | MOPH Government Server |
 
 ---
 
-## Key Files
-- `.htaccess` — routing and rewrite rules  
-- `src/` — core PHP logic related to routing fixes  
+## Project Structure
+
+| Path         | Description             |
+| ------------ | ----------------------- |
+| `/pages`     | Core application pages  |
+| `/component` | Reusable UI components  |
+| `/main-menu` | Navigation logic        |
+| `/ita-data`  | ITA dataset and records |
+| `/variable`  | Global configuration    |
+| `/tb`        | Table processing logic  |
+| `/css`       | Stylesheets             |
+| `/css-js`    | Client-side scripts     |
+| `/img`       | Static assets           |
+| `/index.php` | Entry point             |
 
 ---
 
-## Design Decisions
-- **Fix over rewrite**  
-  Prioritized restoring functionality quickly without high-risk system migration  
+## Deployment
 
-- **Incremental debugging**  
-  Isolated and resolved issues step-by-step to reduce production risk  
+The system is deployed and actively used in a real-world environment:
 
-- **Leverage existing infrastructure**  
-  Used Apache routing instead of introducing new systems  
+* Organization: Kosamphi Nakhon District Health Office
+* Infrastructure: MOPH Production Network
+* Access: https://kosamphi.moph.go.th/ita/ita2024
 
 ---
 
 ## Future Improvements
-- Refactor routing into a maintainable structure  
-- Add documentation for legacy components  
-- Introduce logging and monitoring  
-- Gradually migrate to a modern backend framework  
+
+* Refactor legacy PHP structure into modular architecture
+* Introduce API layer for better separation of concerns
+* Migrate to modern frameworks (e.g., Next.js, Node.js)
+* Improve maintainability and testability
+* Enhance UI/UX for better usability
+
+---
+
+## Author
+
+**Ratchanon Noknoy**
+Software Engineer
 
 ---
 
 ## License
-MIT
+
+MIT License © 2024 Ratchanon Noknoy  
+*This project was developed as an internship project in 2024.*
